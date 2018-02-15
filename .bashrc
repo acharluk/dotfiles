@@ -1,7 +1,8 @@
 alias x="startx"
 alias ff='for f in nocaseglob nullglob ~/Music/* ; do ffplay -nodisp -autoexit "$f"; done'
 
-alias lumos="ls -la --color=auto"
+alias lumos="ls -laF --color=auto"
+alias accio="grep --color=auto"
 
 
 #region $PS1
