@@ -60,16 +60,27 @@ for_window [class="Chromium"]   border none
 for_window [class="Code"]       border none
 for_window [class="Telegram"]   border none
 
-        #region Scratchpad terminal
+        #region Scratchpad
 
+        # Terminal
         for_window [title="dropdown"] floating enable
-        for_window [title="dropdown"] resize set 1366 800
+        for_window [title="dropdown"] resize set 1366 768
         for_window [title="dropdown"] move scratchpad
         for_window [title="dropdown"] border pixel 0
 
         exec xfce4-terminal -T dropdown
         
         bindsym $mod+grave [title="dropdown"] scratchpad show; [title="dropdown"] move position center
+
+        # Ranger
+        for_window [title="floating_ranger"] floating enable
+        for_window [title="floating_ranger"] resize set 1366 768
+        for_window [title="floating_ranger"] move scratchpad
+        for_window [title="floating_ranger"] border pixel 0
+
+        exec --no-startup-id xfce4-terminal -e ranger -T floating_ranger
+        
+        bindsym $mod+F2 [title="floating_ranger"] scratchpad show; [title="floating_ranger"] move position center
 
         #endregion
 
@@ -120,7 +131,7 @@ for_window [class="Telegram"]   border none
 
         #region Menus (modes)
 
-        bindsym $mod+Print      mode $_menu_power
+        bindsym $mod+Delete     mode $_menu_power
         bindsym $mod+z          mode $_menu_apps
 
         #endregion
@@ -151,19 +162,18 @@ for_window [class="Telegram"]   border none
 
         #region Screen capture
 
-        bindsym Print 			exec --no-startup-id maim    > ~/Pictures/Screenshots/$(date +%F_%R:%S_%N).png
-        bindsym Mod1+Print 		exec --no-startup-id maim -s > ~/Pictures/Screenshots/$(date +%F_%R:%S_%N).png
-        bindsym Shift+Print 		exec --no-startup-id maim    | xclip -selection clipboard -t image/png
-        bindsym Shift+Alt+Print 	exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+        bindsym Print   		exec --no-startup-id maim    | xclip -selection clipboard -t image/png
+        bindsym $mod+Print       	exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+        bindsym Shift+Print 		exec --no-startup-id maim    > ~/Pictures/Screenshots/$(date +%F_%R:%S_%N).png
+        bindsym $mod+Shift+Print        exec --no-startup-id maim -s > ~/Pictures/Screenshots/$(date +%F_%R:%S_%N).png
 
         #endregion
 
         #region Other
 
-        bindsym $mod+p exec --no-startup-id "killall screenkey || screenkey"
-        bindsym XF86Search exec $_file_manager
-        bindsym Pause exec --no-startup-id "killall compton || compton"
-        
+        bindsym $mod+p          exec --no-startup-id "killall screenkey || screenkey"
+        bindsym XF86Search      exec $_file_manager
+        bindsym Pause           exec --no-startup-id "killall compton || compton"
 
         #endregion
 

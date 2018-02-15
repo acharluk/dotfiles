@@ -19,7 +19,7 @@ elif [[ "${BATTERY_STATE}" = "Discharging" ]]; then
 else
   echo "${BATTERY_REMAINING} ${BATTERY_POWER}%"
   echo "${BATTERY_REMAINING} ${BATTERY_POWER}%"
-  echo ""
+  echo "#9999FF"
 fi
 
 if [[ "${BATTERY_POWER}" -le "${URGENT_VALUE}" ]]; then
