@@ -1,4 +1,3 @@
-
 #region App paths
 
 set $_terminal	        xfce4-terminal # i3-sensible-terminal
@@ -45,7 +44,7 @@ set $_workspace_10	0. Music
 #endregion
 
 
-#region Assing apps to workspaces
+#region Assign apps to workspaces
 
 assign [class="Chromium"]       $_workspace_1
 assign [class="Code"]           $_workspace_3
@@ -273,6 +272,7 @@ bindsym $mod+shift+d gaps inner all set 10; gaps outer all set 10
 
 #endregion
 
+
 #region i3-configuration
 
 
@@ -394,14 +394,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#enregion
+#endregion
 
 
 #region Run at start (once)
 
 exec --no-startup-id compton
-exec $_internet_browser
-exec $_code_editor
+# exec $_internet_browser
+# exec $_code_editor
 
 #endregion
 
