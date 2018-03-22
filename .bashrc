@@ -2,7 +2,7 @@ alias ff='for f in nocaseglob nullglob ~/Music/* ; do ffplay -nodisp -autoexit "
 
 alias lumos="ls -laF --color=auto"
 alias accio="grep --color=auto"
-
+alias avadakedabra="kill -9"
 
 #region $PS1
 
