@@ -12,3 +12,5 @@ git
 vim
 rofi
 ranger
+feh
+compton
