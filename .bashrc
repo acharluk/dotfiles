@@ -64,3 +64,5 @@ function parse_git_dirty {
 export PS1="\[\e[34m\]\u\[\e[m\]@\h \[\e[33m\][\[\e[m\]\[\e[33m\]\w\[\e[m\]\[\e[33m\]]\[\e[m\] \[\e[36m\]\`echo_git_and_exitstatus\`\n\[\e[37m\]\\$\[\e[m\] "
 
 #endregion
+
+## Your custom config ##
