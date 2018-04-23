@@ -1,11 +1,14 @@
 xorg-server
 xorg-xinit
 xfce4-terminal
-ttf-linux-liberation
+ttf-linux-libertine
 ttf-inconsolata
+ttf-font-awesome
 i3-gaps
 i3blocks
 i3lock
 i3status
 git
 vim
+rofi
+ranger

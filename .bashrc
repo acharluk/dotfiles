@@ -1,3 +1,7 @@
+
+
+## Custom ACharluk ##
+
 alias ff='for f in nocaseglob nullglob ~/Music/* ; do ffplay -nodisp -autoexit "$f"; done'
 
 alias lumos="ls -laF --color=auto"
