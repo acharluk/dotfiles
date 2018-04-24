@@ -1,6 +1,3 @@
-# Just a shortcut (sudo)
-echo "\nalias x=\"startx\"" >> /etc/bash.bashrc
-
 # Yaourt
 echo " " >> /etc/pacman.conf
 echo "[archlinuxfr]" >> /etc/pacman.conf
