@@ -27,3 +27,5 @@ MiscNewTabAdjacent=FALSE
 FontName=Hack 16
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
+BackgroundDarkness=0.850000
+
