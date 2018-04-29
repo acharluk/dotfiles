@@ -55,6 +55,7 @@ assign [class="Telegram"]       $_workspace_9
 
 #region App-specific configuration
 
+for_window [class="^.*"]   border pixel 3
 for_window [class="Chromium"]   border none
 for_window [class="Code"]       border none
 for_window [class="Telegram"]   border none
@@ -65,7 +66,7 @@ for_window [class="Telegram"]   border none
         for_window [title="dropdown"] floating enable
         for_window [title="dropdown"] resize set 1366 768
         for_window [title="dropdown"] move scratchpad
-        for_window [title="dropdown"] border pixel 0
+        # for_window [title="dropdown"] border pixel 0
 
         exec xfce4-terminal -T dropdown
         
@@ -75,7 +76,7 @@ for_window [class="Telegram"]   border none
         for_window [title="floating_ranger"] floating enable
         for_window [title="floating_ranger"] resize set 1366 768
         for_window [title="floating_ranger"] move scratchpad
-        for_window [title="floating_ranger"] border pixel 0
+        # for_window [title="floating_ranger"] border pixel 0
 
         exec --no-startup-id xfce4-terminal -e ranger -T floating_ranger
         
@@ -123,7 +124,7 @@ for_window [class="Telegram"]   border none
 
         #region Start menu (rofi)
 
-        bindsym $mod+space exec --no-startup-id rofi -show run
+        bindsym $mod+space exec --no-startup-id rofi -show drun
 
         #endregion
 
