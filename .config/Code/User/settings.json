@@ -15,12 +15,25 @@
 
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreview": false,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.editor.labelFormat": "medium",
     "workbench.statusBar.feedback.visible": false,
+    "workbench.startupEditor": "none",
+    "workbench.tree.horizontalScrolling": true,
 
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
 
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+
+    "extensions.showRecommendationsOnlyOnDemand": true,
+
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
+
+    "telemetry.enableTelemetry": false,
 }
