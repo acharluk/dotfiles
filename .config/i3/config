@@ -15,9 +15,6 @@ set $_file_manager      nemo
 
 set $_wallpaper_path	~/.config/wall.jpg
 
-set $_menu_power "(E)xit (L)ock (S)uspend (H)ibernate (P)ower off (R)eboot"
-set $_lock_screen_color 282828
-
 set $_menu_apps "(C)ode (G)oogle (T)elegram"
 
 set $pause      --no-startup-id mpc toggle
@@ -33,11 +30,11 @@ set $prev       --no-startup-id mpc prev
 set $_workspace_1	1. Internet
 set $_workspace_2	2. Terminals
 set $_workspace_3	3. VSCode
-set $_workspace_4	4. 
-set $_workspace_5	5. 
-set $_workspace_6	6. 
-set $_workspace_7	7. 
-set $_workspace_8	8. 
+set $_workspace_4	4.
+set $_workspace_5	5.
+set $_workspace_6	6.
+set $_workspace_7	7.
+set $_workspace_8	8.
 set $_workspace_9	9. Telegram
 set $_workspace_10	0. Music
 
@@ -69,7 +66,7 @@ for_window [class="Telegram"]   border none
         # for_window [title="dropdown"] border pixel 0
 
         exec xfce4-terminal -T dropdown
-        
+
         bindsym $mod+grave [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 
         # Ranger
@@ -79,7 +76,7 @@ for_window [class="Telegram"]   border none
         # for_window [title="floating_ranger"] border pixel 0
 
         exec --no-startup-id xfce4-terminal -e ranger -T floating_ranger
-        
+
         bindsym $mod+F2 [title="floating_ranger"] scratchpad show; [title="floating_ranger"] move position center
 
         #endregion
@@ -131,14 +128,14 @@ for_window [class="Telegram"]   border none
 
         #region Menus (modes)
 
-        bindsym $mod+Delete     mode $_menu_power
+        bindsym $mod+Delete     exec acl_dmenu_power
         bindsym $mod+z          mode $_menu_apps
 
         #endregion
 
 
         #region Media keys
-        
+
         bindsym XF86AudioRaiseVolume    exec pamixer --increase 2  && pkill -SIGRTMIN+11 i3blocks
         bindsym XF86AudioLowerVolume    exec pamixer --decrease 2  && pkill -SIGRTMIN+11 i3blocks
         bindsym XF86AudioMute           exec pamixer --toggle-mute && pkill -SIGRTMIN+11 i3blocks
@@ -147,17 +144,17 @@ for_window [class="Telegram"]   border none
         bindsym XF86AudioPlay		exec $pause
         bindsym XF86AudioPrev		exec $prev
         bindsym XF86AudioStop		exec $pause
-        
+
         #endregion
 
 
         #region Brightness
-        
+
         bindsym XF86MonBrightnessUp         exec --no-startup-id /usr/bin/xbacklight -inc 10
         bindsym XF86MonBrightnessDown       exec --no-startup-id /usr/bin/xbacklight -dec 10
         bindsym shift+XF86MonBrightnessUp   exec --no-startup-id /usr/bin/xbacklight -inc 2
         bindsym shift+XF86MonBrightnessDown exec --no-startup-id /usr/bin/xbacklight -dec 2
-        
+
         #endregion
 
         #region Screen capture
@@ -235,25 +232,7 @@ bindsym $mod+shift+d gaps inner all set 10; gaps outer all set 10
 			urgent_workspace   #5294e2 #5294e2 #eeeeee
 	        }
         }
-        
-        #endregion
 
-
-        #region Power management
-        
-        mode $_menu_power {
-
-                bindsym e exec i3-msg exit			; mode "default"
-                bindsym l exec i3lock -c $_lock_screen_color	; mode "default"
-                bindsym s exec systemctl suspend		; mode "default" ; exec i3lock -c $_lock_screen_color
-                bindsym s exec systemctl hybrid-sleep		; mode "default" ; exec i3lock -c $_lock_screen_color
-                bindsym p exec systemctl poweroff
-                bindsym r exec systemctl reboot
-
-                #Exit menu
-                bindsym Escape mode "default"
-        }
-        
         #endregion
 
 
