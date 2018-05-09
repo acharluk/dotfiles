@@ -6,19 +6,18 @@ set $_internet_browser	chromium
 set $_code_editor       code
 set $_messaging_app	~/Apps/Telegram/Telegram
 set $_music_player	clementine
-set $_file_manager      nemo
+set $_file_manager      nautilus
 
 #endregion
 
 
 #region Other variables
 
-set $_wallpaper_path	~/.config/wall.jpg
+set $_wallpaper_path	~/.acharluk/wallpaper.png
 
 set $_menu_apps "(C)ode (G)oogle (T)elegram"
 
 set $pause      --no-startup-id mpc toggle
-set $trupause   --no-startup-id mpc pause
 set $next       --no-startup-id mpc next
 set $prev       --no-startup-id mpc prev
 
@@ -27,16 +26,16 @@ set $prev       --no-startup-id mpc prev
 
 #region Workspace names
 
-set $_workspace_1	1. Internet
-set $_workspace_2	2. Terminals
-set $_workspace_3	3. VSCode
-set $_workspace_4	4.
-set $_workspace_5	5.
-set $_workspace_6	6.
-set $_workspace_7	7.
-set $_workspace_8	8.
-set $_workspace_9	9. Telegram
-set $_workspace_10	0. Music
+set $_workspace_1	internet
+set $_workspace_2	terminal
+set $_workspace_3	vscode
+set $_workspace_4	4
+set $_workspace_5	5
+set $_workspace_6	6
+set $_workspace_7	7
+set $_workspace_8	8
+set $_workspace_9	telegram
+set $_workspace_10	music
 
 #endregion
 
@@ -52,7 +51,7 @@ assign [class="Telegram"]       $_workspace_9
 
 #region App-specific configuration
 
-for_window [class="^.*"]   border pixel 3
+for_window [class="^.*"]        border pixel 3
 for_window [class="Chromium"]   border none
 for_window [class="Code"]       border none
 for_window [class="Telegram"]   border none
@@ -89,8 +88,8 @@ for_window [class="Telegram"]   border none
         #region Workspaces
 
         # Cycle through workspaces
-        bindsym $mod+Tab        workspace next
-        bindsym $mod+Shift+Tab  workspace prev
+        bindsym $mod+Ctrl+Right workspace next
+        bindsym $mod+Ctrl+Left  workspace prev
 
         # Switch to workspace
         bindsym $mod+1 workspace $_workspace_1

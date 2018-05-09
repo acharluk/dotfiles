@@ -1,12 +1,55 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
 
 
 ## Custom ACharluk ##
 
 alias ff='for f in nocaseglob nullglob ~/Music/* ; do ffplay -nodisp -autoexit "$f"; done'
 
-alias lumos="ls -laF --color=auto"
-alias accio="grep --color=auto"
-alias avadakedabra="kill -9"
+alias lumos="ls -lahF" #spell
+alias accio="grep --color=auto" #spell
+alias avadakedabra="kill -9" #spell
+
+#region Shortcuts
+
+# Basic shortcuts
+alias s='sudo'
+alias c='clear'
+alias l='ls -aF'
+alias ll='lumos'
+
+# Shortcut for editing config files in vim
+alias v='$EDITOR'
+alias vbrc='$EDITOR $conf_brc'
+alias vbp='$EDITOR $conf_bp'
+alias vvrc='$EDITOR $conf_vrc'
+alias vi3c='$EDITOR $conf_i3c'
+alias vi3b='$EDITOR $conf_i3b'
+
+# Shortcut for editing config files in vscode
+alias vv='$EDITOR2'
+alias vvbrc='$EDITOR2 $conf_brc'
+alias vvbp='$EDITOR2 $conf_bp'
+alias vvvrc='$EDITOR2 $conf_vrc'
+alias vvi3c='$EDITOR2 $conf_i3c'
+alias vvi3b='$EDITOR2 $conf_i3b'
+
+# Shortcuts for pacman/yaourt
+alias y='yaourt'
+alias yi='sudo pacman -S'
+alias yr='sudo pacman -Rs'
+alias yu='sudo pacman -Su'
+alias yyu='sudo pacman -Syu'
+alias yrd='s pacman -Rs $(pacman -Qtdq)'
+
+#endregion
+
 
 #region $PS1
 
