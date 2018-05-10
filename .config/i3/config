@@ -17,9 +17,15 @@ set $_wallpaper_path	~/.acharluk/wallpaper.png
 
 set $_menu_apps "(C)ode (G)oogle (T)elegram"
 
-set $pause      --no-startup-id mpc toggle
-set $next       --no-startup-id mpc next
-set $prev       --no-startup-id mpc prev
+## MPC bindings
+# set $pause      --no-startup-id mpc toggle
+# set $next       --no-startup-id mpc next
+# set $prev       --no-startup-id mpc prev
+
+## Clementine bindings
+set $pause      --no-startup-id qdbus-qt4 org.mpris.MediaPlayer2.clementine /org/mpris/MediaPlayer2 PlayPause
+set $next       --no-startup-id qdbus-qt4 org.mpris.MediaPlayer2.clementine /org/mpris/MediaPlayer2 Next
+set $prev       --no-startup-id qdbus-qt4 org.mpris.MediaPlayer2.clementine /org/mpris/MediaPlayer2 Previous
 
 #endregion
 
@@ -45,6 +51,7 @@ set $_workspace_10	music
 assign [class="Chromium"]       $_workspace_1
 assign [class="Code"]           $_workspace_3
 assign [class="Telegram"]       $_workspace_9
+assign [class="Clementine"]       $_workspace_10
 
 #endregion
 
@@ -55,6 +62,7 @@ for_window [class="^.*"]        border pixel 3
 for_window [class="Chromium"]   border none
 for_window [class="Code"]       border none
 for_window [class="Telegram"]   border none
+for_window [class="Clementine"]   border none
 
         #region Scratchpad
 
@@ -198,6 +206,7 @@ bindsym $mod+shift+d gaps inner all set 10; gaps outer all set 10
         bar {
                 font pango:Hack, FontAwesome 12
                 status_command i3blocks -c ~/.config/i3/i3blocks.config
+                i3bar_command  i3bar -t
 
                 # Solarized dark theme
                 # colors {
@@ -222,13 +231,13 @@ bindsym $mod+shift+d gaps inner all set 10; gaps outer all set 10
 	        # }
 
                 colors {
-	   		background #21242b
-			statusline #d3dae3
-			separator  #585e74
-			#	           border  backgr  text
-			focused_workspace  #282e34 #282e34 #dddddd
-			inactive_workspace #21242b #21242b #7c818c
-			urgent_workspace   #5294e2 #5294e2 #eeeeee
+	   		background #21242b00
+			statusline #d3dae3cc
+			separator  #585e7488
+			#	           border    backgr    text
+			focused_workspace  #282e3400 #282e3400 #ddddddcc
+			inactive_workspace #21242b00 #21242b00 #7c818ccc
+			urgent_workspace   #5294e200 #5294e2cc #eeeeeecc
 	        }
         }
 
