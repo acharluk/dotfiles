@@ -7,8 +7,8 @@
 
 ## Custom ACharluk ##
 
+export PATH="$PATH:~/.acharluk/scripts"
 export TERMINAL='xfce4-terminal'
-export PATH=$PATH:~/.acharluk/scripts
 export BROWSER="chromium"
 export EDITOR="vim"
 export EDITOR2="code"
@@ -23,7 +23,5 @@ export conf_i3b=~/.config/i3/i3blocks.config
 if [[ "$(tty)" = "/dev/tty1" ]]; then
     pgrep i3 || startx;
 fi
-
-PATH = $PATH:~/.acharluk/scripts
 
 ## Your custom config ##
