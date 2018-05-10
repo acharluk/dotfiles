@@ -7,11 +7,11 @@
 
 ## Custom ACharluk ##
 
-export PATH="$PATH:~/.acharluk/scripts"
-export TERMINAL='xfce4-terminal'
-export BROWSER="chromium"
-export EDITOR="vim"
-export EDITOR2="code"
+export PATH=$PATH:~/.acharluk/scripts
+export TERMINAL=xfce4-terminal
+export BROWSER=chromium
+export EDITOR=vim
+export EDITOR2=code
 
 export conf_brc=~/.bashrc
 export conf_bp=~/.bash_profile
