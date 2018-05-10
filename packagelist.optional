@@ -17,3 +17,5 @@ zathura
 zathura-pdf-mupdf
 clementine
 gst-plugins-good
+pandoc
+texlive-core
