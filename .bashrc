@@ -23,6 +23,12 @@ alias s='sudo'
 alias c='clear'
 alias l='ls -aF'
 alias ll='lumos'
+alias la='l | accio'
+alias lla='ll | accio'
+alias ..='cd ..'
+alias .h='cd ~'
+alias .d='cd ~/delete'
+alias .w='cd ~/downloads'
 
 # Shortcut for editing config files in vim
 alias v='$EDITOR'
