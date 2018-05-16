@@ -70,7 +70,13 @@ alias ga.='git add .'
 alias gc='git commit -m'
 alias gca='git commit -a -m'
 alias gp='git push'
-gcp() { git add . && git commit -m $1 && git push; }
+gcp() { git add . && git commit -m "$1" && git push; }
+
+# Easy TODO list
+alias todo='$EDITOR ~/.acharluk/TODO'
+alias ttodo='$EDITOR2 ~/.acharluk/TODO'
+alias t='todo'
+alias tt='ttodo'
 
 # Shortcuts for pacman/yaourt
 alias y='yaourt'
