@@ -205,7 +205,7 @@ bindsym $mod+shift+d gaps inner all set 10; gaps outer all set 10
         # finds out, if available)
         bar {
                 font pango:Hack, FontAwesome 12
-                status_command i3blocks -c ~/.config/i3/i3blocks.config
+                status_command i3blocks -c ~/.acharluk/i3blocks.config
                 i3bar_command  i3bar -t
 
                 # Solarized dark theme
