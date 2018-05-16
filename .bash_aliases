@@ -60,6 +60,17 @@ alias vvvrc='$EDITOR2 $conf_vrc'
 alias vvi3c='$EDITOR2 $conf_i3c'
 alias vvi3b='$EDITOR2 $conf_i3b'
 
+# Shortcuts for git
+alias g='git'
+alias gl='git pull'
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias ga.='git add .'
+alias gc='git commit -m'
+alias gca='git commit -a -m'
+alias gp='git push'
+
 # Shortcuts for pacman/yaourt
 alias y='yaourt'
 alias yi='sudo pacman -S'
