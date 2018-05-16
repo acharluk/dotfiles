@@ -70,6 +70,7 @@ alias ga.='git add .'
 alias gc='git commit -m'
 alias gca='git commit -a -m'
 alias gp='git push'
+gcp() { git add . && git commit -m $1 && git push; }
 
 # Shortcuts for pacman/yaourt
 alias y='yaourt'
