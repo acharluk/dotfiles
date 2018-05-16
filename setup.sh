@@ -1,21 +1,28 @@
 current_date=$(date +"%F_%H-%M-%S")
+backup_folder=~/.acharluk/backups/$current_date
+
+echo "Copying .acharluk directory"
+cp -rf .acharluk ~/.acharluk
+
+echo "Creating backup folder: $backup_folder"
+mkdir -p $backup_folder
 
 echo "Backing up original configuration..."
 if [ -f ~/.bashrc ]; then
     echo "Moving .bashrc to .bashrc.backup_$current_date"
-    mv ~/.bashrc ~/.bashrc.backup_$current_date
+    mv ~/.bashrc $backup_folder/.bashrc
 fi
 if [ -f ~/.bash_profile ]; then
     echo "Moving .bash_profile to .bash_profile.backup_$current_date"
-    mv ~/.bash_profile ~/.bash_profile.backup_$current_date
+    mv ~/.bash_profile $backup_folder/.bash_profile
 fi
 if [ -f ~/.bash_aliases ]; then
     echo "Moving .bash_aliases to .bash_aliases.backup_$current_date"
-    mv ~/.bash_aliases ~/.bash_aliases.backup_$current_date
+    mv ~/.bash_aliases $backup_folder/.bash_aliases
 fi
 if [ -f ~/.vimrc ]; then
     echo "Moving .vimrc to .vimrc.backup_$current_date"
-    mv ~/.vimrc ~/.vimrc.backup_$current_date
+    mv ~/.vimrc $backup_folder/.vimrc
 fi
 
 
@@ -48,6 +55,3 @@ echo "Adding bash profile"
 cp .bash_profile ~/.bash_profile
 echo "Adding vimrc"
 cp .vimrc ~/.vimrc
-
-echo "Copying .acharluk directory"
-cp -r .acharluk ~/.acharluk
