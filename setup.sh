@@ -6,4 +6,5 @@ mkdir -p ~/testing ~/downloads ~/repos ~/documents ~/music ~/pictures ~/videos
 
 sudo sh installpackages.sh
 
-./.acharluk/scripts/acl.update
+cp -r .acharluk ~
+~/.acharluk/scripts/acl.update
