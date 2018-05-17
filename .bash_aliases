@@ -75,7 +75,13 @@ alias gp='git push'
 gcp() { git add . && git commit -m "$1" && git push; }
 
 # Easy TODO list
-alias todo='$EDITOR ~/.acharluk/TODO'
+todo() {
+	if [ $# -gt 1 ]; then
+		echo "[] $@" >> ~/.acharluk/TODO;
+	else
+		$EDITOR ~/.acharluk/TODO;
+	fi
+}
 alias ttodo='$EDITOR2 ~/.acharluk/TODO'
 alias t='todo'
 alias tt='ttodo'

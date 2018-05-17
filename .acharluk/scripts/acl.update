@@ -16,4 +16,4 @@ echo "Updating .vimrc"
 cp .vimrc ~/.vimrc
 
 echo "Removing /tmp/acharluk/dotfiles"
-rm -r /tmp/acharluk/dotfiles
+rm -rf /tmp/acharluk/dotfiles
