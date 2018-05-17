@@ -1,8 +1,8 @@
+mkdir /tmp/acharluk && cd /tmp/acharluk
+git clone https://github.com/acharluk/dotfiles.git && cd dotfiles
+
 current_date=$(date +"%F_%H-%M-%S")
 backup_folder=~/.acharluk/backups/$current_date
-
-echo "Creating home directories"
-mkdir -p ~/testing ~/downloads ~/repos ~/documents ~/music ~/pictures ~/videos
 
 echo "Copying .acharluk directory"
 cp -rf .acharluk ~/.acharluk
@@ -28,28 +28,9 @@ if [ -f ~/.vimrc ]; then
     mv ~/.vimrc $backup_folder/.vimrc
 fi
 
-
-if grep -q archlinux.fr "/etc/pacman.conf"; then
-    echo "archlinuxfr is already setup!";
-else
-    echo "Adding archlinux.fr server to pacman configuration"
-    echo " " >> /etc/pacman.conf
-    echo "[archlinuxfr]" >> /etc/pacman.conf
-    echo "SigLevel = Never" >> /etc/pacman.conf
-    echo "Server = http://repo.archlinux.fr/\$arch" >> /etc/pacman.conf
-fi
-
-echo "Updating pacman and installing yaourt"
-pacman -Sy yaourt --noconfirm
-
-echo "Installing all packages"
-pacman -S --needed --force $(cat packagelist packagelist.optional packagelist.wifi)
-
-echo "Adding bash aliases"
 cp .bash_aliases ~/.bash_aliases
-echo "Adding bashrc"
 cp .bashrc ~/.bashrc
-echo "Adding bash profile"
 cp .bash_profile ~/.bash_profile
-echo "Adding vimrc"
 cp .vimrc ~/.vimrc
+
+rm -r /tmp/acharluk/dotfiles
