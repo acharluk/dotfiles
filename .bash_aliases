@@ -8,10 +8,12 @@ alias avadakedabra="kill -9"
 # Basic shortcuts
 alias s='sudo'
 alias c='clear'
-alias l='ls -aF'
-alias ll='lumos'
-alias la='l | accio'
-alias lla='ll | accio'
+alias l='ls -F'
+alias ll='ls -lF'
+alias lh='ls -aF'
+alias llh='lumos'
+alias la='lh | accio'
+alias lla='llh | accio'
 
 # Useful directories
 alias ..='cd ..'
