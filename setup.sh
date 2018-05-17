@@ -1,6 +1,9 @@
 current_date=$(date +"%F_%H-%M-%S")
 backup_folder=~/.acharluk/backups/$current_date
 
+echo "Creating home directories"
+mkdir -p ~/testing ~/downloads ~/repos ~/documents ~/music ~/pictures ~/videos
+
 echo "Copying .acharluk directory"
 cp -rf .acharluk ~/.acharluk
 
