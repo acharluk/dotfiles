@@ -1,4 +1,4 @@
-mkdir /tmp/acharluk && cd /tmp/acharluk
+mkdir -p /tmp/acharluk && cd /tmp/acharluk
 git clone https://github.com/acharluk/dotfiles.git && cd dotfiles
 
 current_date=$(date +"%F_%H-%M-%S")
