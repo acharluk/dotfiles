@@ -15,5 +15,10 @@ cp .bash_profile ~/.bash_profile
 echo "Updating .vimrc"
 cp .vimrc ~/.vimrc
 
+echo "Updating .acharluk directory"
+cp -rf .acharluk ~
+echo "Updating .config directory"
+cp -rf .config ~
+
 echo "Removing /tmp/acharluk/dotfiles"
 rm -rf /tmp/acharluk/dotfiles
