@@ -76,7 +76,7 @@ gcp() { git add . && git commit -m "$1" && git push; }
 
 # Easy TODO list
 todo() {
-	if [ $# -gt 1 ]; then
+	if [ $# -gt 0 ]; then
 		echo "[] $@" >> ~/.acharluk/TODO;
 	else
 		$EDITOR ~/.acharluk/TODO;
