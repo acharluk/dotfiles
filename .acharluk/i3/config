@@ -168,8 +168,8 @@ for_window [class="Clementine"]   border none
 
         bindsym Print   		exec --no-startup-id maim    | xclip -selection clipboard -t image/png
         bindsym $mod+Print       	exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
-        bindsym Shift+Print 		exec --no-startup-id maim    > ~/Pictures/Screenshots/$(date +%F_%R:%S_%N).png
-        bindsym $mod+Shift+Print        exec --no-startup-id maim -s > ~/Pictures/Screenshots/$(date +%F_%R:%S_%N).png
+        bindsym Shift+Print 		exec --no-startup-id maim    > ~/pictures/screenshots/$(date +%F_%R:%S_%N).png
+        bindsym $mod+Shift+Print        exec --no-startup-id maim -s > ~/pictures/screenshots/$(date +%F_%R:%S_%N).png
 
         #endregion
 
