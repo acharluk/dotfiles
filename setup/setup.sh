@@ -6,5 +6,8 @@ mkdir -p ~/testing ~/downloads ~/repos/$USER ~/documents ~/music ~/pictures/scre
 
 sudo sh installpackages.sh
 
-cp -r .acharluk ~
+echo "Installing yaourt packages"
+yaourt -S --needed --force  $(cat packagelist.yaourt) --noconfirm
+
+cp -r ../user/.acharluk ~
 ~/.acharluk/scripts/acl.update
