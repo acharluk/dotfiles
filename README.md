@@ -1,6 +1,6 @@
 # dotfiles
 ## How to install my configuration
-Run this command: `git clone https://github.com/acharluk/dotfiles.git && cd dotfiles && sh setup.sh`
+Run this command: `git clone https://github.com/acharluk/dotfiles.git && cd dotfiles/setup && sh setup.sh`
 
 It will install all packages in `packagelist`, `packagelist.optional` and `packagelist.wifi` and apply all my configuration to your system!
 
