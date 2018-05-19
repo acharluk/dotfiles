@@ -15,6 +15,8 @@ alias lh='ls -aF'
 alias llh='lumos'
 alias la='lh | accio'
 alias lla='llh | accio'
+alias wt='weather'
+alias nb='newsboat'
 
 # Useful directories
 alias ..='cd ..'
