@@ -13,7 +13,7 @@ cp -r ../user/.acharluk ~
 ~/.acharluk/scripts/acl.update
 
 echo "Adding .config directory"
-cp -rf .config ~
+cp -rf ../user/.config ~
 echo "Adding .xinitrc"
 cp ../user/.xinitrc ~
 echo "Adding .Xresources"

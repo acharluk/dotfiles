@@ -12,4 +12,6 @@ echo "Updating pacman and installing yaourt"
 pacman -Sy yaourt --noconfirm
 
 echo "Installing all packages"
-pacman -S --needed --force $(cat packagelist packagelist.optional packagelist.wifi) --noconfirm
+pacman -S --needed --force $(cat packagelist) --noconfirm
+pacman -S --needed --force $(cat packagelist.optional) --noconfirm
+pacman -S --needed --force $(cat packagelist.wifi) --noconfirm
