@@ -1,0 +1,4 @@
+browser linkhandler
+macro , open-in-browser
+macro v set browser "i3 exec mpv"; open-in-browser ; set browser linkhandler
+macro d set browser "youtube-dl"; open-in-browser ; set browser linkhandler
