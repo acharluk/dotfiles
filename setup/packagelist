@@ -3,7 +3,6 @@ xorg-xinit
 xfce4-terminal
 ttf-linux-libertine
 ttf-inconsolata
-ttf-font-awesome
 i3-gaps
 i3blocks
 i3lock
@@ -17,3 +16,8 @@ compton
 maim
 xclip
 ntfs-3g
+dmenu
+acpi
+pamixer
+pavucontrol
+xorg-xbacklight
