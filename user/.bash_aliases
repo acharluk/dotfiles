@@ -31,6 +31,8 @@ alias .m='cd ~/music'
 alias .p='cd ~/pictures'
 alias .v='cd ~/videos'
 alias .s='cd ~/.acharluk/scripts'
+alias .a='cd ~/.acharluk'
+alias .c='cd ~/.config'
 
 alias l..='l ..'
 alias l.h='l ~'
