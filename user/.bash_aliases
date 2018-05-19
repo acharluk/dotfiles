@@ -17,6 +17,8 @@ alias la='lh | accio'
 alias lla='llh | accio'
 alias wt='weather'
 alias nb='newsboat'
+alias z='zathura'
+alias yd='youtube-dl'
 
 # Useful directories
 alias ..='cd ..'
