@@ -18,6 +18,7 @@ xclip
 ntfs-3g
 dmenu
 acpi
+pulseaudio
 pamixer
 pavucontrol
 xorg-xbacklight
