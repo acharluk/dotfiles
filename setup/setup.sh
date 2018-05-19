@@ -11,3 +11,13 @@ yaourt -S --needed --force  $(cat packagelist.yaourt) --noconfirm
 
 cp -r ../user/.acharluk ~
 ~/.acharluk/scripts/acl.update
+
+echo "Adding .config directory"
+cp -rf .config ~
+echo "Adding .xinitrc"
+cp ../user/.xinitrc ~
+echo "Adding .Xresources"
+cp ../user/.Xresources ~
+
+echo "Adding /etc files"
+sudo cp -r ../etc/* /etc
