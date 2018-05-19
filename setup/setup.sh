@@ -14,6 +14,8 @@ cp -r ../user/.acharluk ~
 
 echo "Adding .config directory"
 cp -rf ../user/.config ~
+echo "Adding .newsboat directory"
+cp -rf ../user/.newsboat ~
 echo "Adding .xinitrc"
 cp ../user/.xinitrc ~
 echo "Adding .Xresources"
