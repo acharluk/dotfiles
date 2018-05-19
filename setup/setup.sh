@@ -20,6 +20,8 @@ echo "Adding .xinitrc"
 cp ../user/.xinitrc ~
 echo "Adding .Xresources"
 cp ../user/.Xresources ~
+echo "Adding .gtkrc-2.0.mine"
+cp ../user/.gtkrc-2.0.mine ~
 
 echo "Adding /etc files"
 sudo cp -r ../etc/* /etc
