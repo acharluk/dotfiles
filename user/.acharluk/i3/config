@@ -75,6 +75,7 @@ for_window [class="Clementine"]   border none
         exec xfce4-terminal -T dropdown
 
         bindsym $mod+grave [title="dropdown"] scratchpad show; [title="dropdown"] move position center
+        bindsym $mod+shift+grave exec xfce4-terminal -T dropdown
 
         # Ranger
         for_window [title="floating_ranger"] floating enable
