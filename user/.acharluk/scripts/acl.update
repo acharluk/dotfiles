@@ -2,7 +2,7 @@
 
 echo "Creating temporary folder /tmp/acharluk"
 mkdir -p /tmp/acharluk && cd /tmp/acharluk
-git clone https://github.com/acharluk/dotfiles.git && cd dotfiles
+git clone https://github.com/acharluk/dotfiles.git && cd dotfiles/user
 
 acl.backup
 
