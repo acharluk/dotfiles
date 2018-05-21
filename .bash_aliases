@@ -7,6 +7,7 @@ alias avadakedabra="kill -9"
 
 # Basic shortcuts
 alias s='sudo'
+alias sv='sudo vim'
 alias c='clear'
 alias l='ls -F'
 alias ll='ls -lF'
@@ -25,6 +26,7 @@ alias .d='cd ~/documents'
 alias .m='cd ~/music'
 alias .p='cd ~/pictures'
 alias .v='cd ~/videos'
+alias .s='cd ~/.acharluk/scripts'
 
 alias l..='l ..'
 alias l.h='l ~'
