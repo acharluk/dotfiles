@@ -1,7 +1,10 @@
 #!/bin/bash
 
-echo "Creating temporary folder /tmp/acharluk"
-mkdir -p /tmp/acharluk && cd /tmp/acharluk
+echo "Creating temporary folder /tmp/dotfiles"
+cd /tmp
+if [[ -f /tmp/dotfiles ]]; then
+    rm -rf /tmp/dotfiles;
+fi
 git clone https://github.com/acharluk/dotfiles.git && cd dotfiles/user
 
 acl.backup
@@ -18,5 +21,5 @@ cp .vimrc ~/.vimrc
 echo "Updating .acharluk directory"
 cp -rf .acharluk ~
 
-echo "Removing /tmp/acharluk/dotfiles"
-rm -rf /tmp/acharluk/dotfiles
+echo "Removing /tmp/dotfiles"
+rm -rf /tmp/dotfiles
