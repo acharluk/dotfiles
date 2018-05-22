@@ -16,7 +16,7 @@ alias llh='lumos'
 alias la='lh | accio'
 alias lla='llh | accio'
 alias wt='weather'
-alias nb='newsboat'
+alias n='newsboat -r'
 alias z='zathura'
 alias yd='youtube-dl'
 
