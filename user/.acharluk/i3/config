@@ -67,14 +67,14 @@ for_window [class="Clementine"]   border none
         #region Scratchpad
 
         # Terminal
-        for_window [title="dropdown"] floating enable
-        for_window [title="dropdown"] resize set 1366 768
-        for_window [title="dropdown"] move scratchpad
+        for_window [title="dropdown_terminal"] floating enable
+        for_window [title="dropdown_terminal"] resize set 1366 768
+        for_window [title="dropdown_terminal"] move scratchpad
 
-        exec xfce4-terminal -T dropdown
+        exec xfce4-terminal -T dropdown_terminal
 
-        bindsym $mod+grave [title="dropdown"] scratchpad show; [title="dropdown"] move position center
-        bindsym $mod+shift+grave exec xfce4-terminal -T dropdown
+        bindsym $mod+grave [title="dropdown_terminal"] scratchpad show; [title="dropdown_terminal"] move position center
+        bindsym $mod+shift+grave exec xfce4-terminal -T dropdown_terminal
 
         # Ranger
         for_window [title="floating_ranger"] floating enable
