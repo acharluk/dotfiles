@@ -86,6 +86,13 @@ for_window [class="Clementine"]   border none
         bindsym $mod+F2 [title="floating_ranger"] scratchpad show; [title="floating_ranger"] move position center
         bindsym $mod+shift+F2 exec --no-startup-id xfce4-terminal -e ranger -T floating_ranger
 
+        # Hidden terminal
+        for_window [title="dropdown_hidden"] floating enable
+        for_window [title="dropdown_hidden"] resize set 1366 768
+        for_window [title="dropdown_hidden"] move scratchpad
+
+        bindsym $mod+F12 [title="dropdown_hidden"] scratchpad show; [title="dropdown_hidden"] move position center
+
         #endregion
 
 #endregion
