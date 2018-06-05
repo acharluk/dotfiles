@@ -146,6 +146,8 @@ for_window [class="Clementine"]   border none
 
         bindsym XF86AudioRaiseVolume    exec pamixer --increase 2  && pkill -SIGRTMIN+11 i3blocks && dunstify -t 1000 -r 1 "Volume: $(pamixer --get-volume)%"
         bindsym XF86AudioLowerVolume    exec pamixer --decrease 2  && pkill -SIGRTMIN+11 i3blocks && dunstify -t 1000 -r 1 "Volume: $(pamixer --get-volume)%"
+        bindsym Shift+XF86AudioRaiseVolume    exec pamixer --increase 10  && pkill -SIGRTMIN+11 i3blocks && dunstify -t 1000 -r 1 "Volume: $(pamixer --get-volume)%"
+        bindsym Shift+XF86AudioLowerVolume    exec pamixer --decrease 10  && pkill -SIGRTMIN+11 i3blocks && dunstify -t 1000 -r 1 "Volume: $(pamixer --get-volume)%"
         bindsym XF86AudioMute           exec pamixer --toggle-mute && pkill -SIGRTMIN+11 i3blocks && dunstify -t 1000 -r 2 "Muted: $(pamixer --get-mute)"
         bindsym $mod+F1                 exec --no-startup-id pavucontrol
         bindsym XF86AudioNext		exec $next
