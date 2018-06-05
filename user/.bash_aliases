@@ -24,6 +24,7 @@ alias mf='mpv --fullscreen'
 alias ms='mpv --no-video'
 alias yd='youtube-dl'
 alias ydv='yd -o ~/videos/%%\(title\)s-%%\(id\)s.%%\(ext\)s'
+alias yv='youtube-viewer'
 
 # Useful directories
 alias ..='cd ..'
