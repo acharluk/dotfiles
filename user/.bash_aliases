@@ -102,9 +102,9 @@ alias t='todo'
 alias tt='ttodo'
 
 # Shortcuts for pacman/yaourt
-alias y='yaourt'
-alias yi='sudo pacman -S'
+alias y='yaourt --noconfirm'
+alias yi='yaourt -S --noconfirm'
 alias yr='sudo pacman -Rs'
 alias yu='sudo pacman -Su'
-alias yyu='sudo pacman -Syu'
+alias yyu='yaourt -Syu --aur --noconfirm'
 alias yrd='s pacman -Rs $(pacman -Qtdq)'
