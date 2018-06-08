@@ -101,6 +101,12 @@ alias ttodo='$EDITOR2 ~/.acharluk/TODO'
 alias t='todo'
 alias tt='ttodo'
 
+fw() { while inotifywait "$1"; do "$2"; done }
+fwl() { while inotifywait "$1"; do pdflatex $1; done }
+fwm() { while inotifywait "$1"; do make; done }
+fwmr() { while inotifywait "$1"; do make run; done }
+
+
 # Shortcuts for pacman/yaourt
 alias y='yaourt --noconfirm'
 alias yi='yaourt -S --noconfirm'
